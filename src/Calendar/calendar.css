@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Mulish", sans-serif;
+}
+.nepali-date-picker-container {
+  position: relative;
+}
+.nepali-date-picker-button {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  min-width: 180px;
+  min-height: 28px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.nepali-calendar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: absolute;
+}
+
+.nepali-calendar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.nepali-calendar-month {
+  font-size: 18;
+  font-weight: bold;
+  border: 1px solid #bdbdbd;
+  cursor: pointer;
+}
+.nepali-calendar-month-dropdown {
+  font-size: 16;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  padding: 6px 10px;
+  width: 80px;
+  text-align: center;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nepali-calendar-next-button,
+.nepali-calendar-prev-button {
+  padding: 2px 6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nepali-calendar-week {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.prev-next-month-days {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(170, 170, 170);
+  user-select: none;
+  cursor: default;
+}
+.current-month-days {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+}
+
+.nepali-calendar-render {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 4px;
+}
