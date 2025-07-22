@@ -1,4 +1,4 @@
-import { Calendar } from "./Calendar/Calendar";
+import DatePicker from "./Calendar/Datepicker";
 
 function App() {
   const nepaliDate = "2082-4-2";
@@ -7,7 +7,7 @@ function App() {
   };
   return (
     <>
-      <Calendar
+      <DatePicker
         value={nepaliDate}
         onChange={(value: any) => handleSelectedDate(value)}
       />

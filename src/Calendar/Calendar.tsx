@@ -4,8 +4,8 @@ import {
   daysInWeek,
   firstDayOfYearWeekdayMap,
   months,
-} from "./Constant";
-import "./calendar.css";
+} from "./constants/Constant";
+import "../Calendar/styles/calendar.css";
 
 type DateObject = {
   year: number | string;
@@ -16,8 +16,8 @@ type Props = {
   value: string;
   onChange: (date: DateObject) => void;
 };
-const minDate: any = { year: 2082, month: 4, day: 1 };
-const maxDate: any = { year: 2082, month: 4, day: 25 };
+const minDate: any = {};
+const maxDate: any = {};
 
 export function Calendar(props: Props) {
   const { value, onChange } = props;
@@ -189,10 +189,6 @@ export function Calendar(props: Props) {
 
     return calendarDays;
   };
-  const atMinMonth =
-    selectedDate.year === minDate.year && selectedDate.month === minDate.month;
-  const atMaxMonth =
-    selectedDate.year === maxDate.year && selectedDate.month === maxDate.month;
 
   const dropdownRef = useRef<any>(null);
   useEffect(() => {
@@ -221,12 +217,7 @@ export function Calendar(props: Props) {
           <div className="nepali-calendar-inner">
             <button
               onClick={goToPreviousMonth}
-              // disabled={atMinMonth}
               className="nepali-calendar-prev-button"
-              // style={{
-              //   opacity: atMinMonth ? 0.5 : 1,
-              //   cursor: atMinMonth ? "not-allowed" : "pointer",
-              // }}
             >
               ◀
             </button>
@@ -273,12 +264,7 @@ export function Calendar(props: Props) {
             </div>
             <button
               onClick={goToNextMonth}
-              // disabled={atMaxMonth}
               className="nepali-calendar-next-button"
-              // style={{
-              //   opacity: atMaxMonth ? 0.5 : 1,
-              //   cursor: atMaxMonth ? "not-allowed" : "pointer",
-              // }}
             >
               ▶
             </button>

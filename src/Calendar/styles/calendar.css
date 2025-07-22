@@ -9,14 +9,16 @@
   border-radius: 4px;
   border: none;
   outline: none;
-  min-width: 180px;
+  min-width: 200px;
   min-height: 28px;
   padding: 0 10px;
   display: flex;
   align-items: center;
 }
+
 .nepali-calendar {
-  padding: 10px;
+  margin-top: 5px;
+  padding: 5px;
   border: 1px solid #ccc;
   display: inline-block;
   position: absolute;
@@ -31,18 +33,16 @@
 }
 
 .nepali-calendar-month {
-  font-size: 18;
   font-weight: bold;
   border: 1px solid #bdbdbd;
   cursor: pointer;
 }
 .nepali-calendar-month-dropdown {
-  font-size: 16;
   font-weight: bold;
   outline: none;
   border: none;
-  padding: 6px 10px;
-  width: 80px;
+  padding: 4px 2px;
+  width: 65px;
   text-align: center;
 }
 
@@ -52,11 +52,13 @@ select {
   appearance: none;
   background: transparent;
   cursor: pointer;
+  font-size: 13px;
+  color: rgb(107, 107, 107);
 }
 
 .nepali-calendar-next-button,
 .nepali-calendar-prev-button {
-  padding: 2px 6px;
+  padding: 0px 4px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -64,12 +66,13 @@ select {
 
 .nepali-calendar-week {
   font-weight: bold;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
+  color: rgb(107, 107, 107);
 }
 
 .prev-next-month-days {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,8 +81,8 @@ select {
   cursor: default;
 }
 .current-month-days {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,7 +94,8 @@ select {
 .nepali-calendar-render {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 1px;
+  row-gap: 8px;
+  column-gap: 1px;
   font-size: 12px;
   text-align: center;
   margin-bottom: 4px;
